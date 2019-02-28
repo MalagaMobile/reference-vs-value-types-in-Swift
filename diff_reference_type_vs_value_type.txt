@@ -1,0 +1,16 @@
+20c20
+< class Superhero {
+---
+> struct Superhero {
+31c31
+<     func fight(_ enemy:Superhero, luckyFactor: Int) {
+---
+>     mutating func fight(_ enemy:Superhero, luckyFactor: Int) {
+62c62
+< func fightTillDeath(superhero1: Superhero, superhero2: Superhero) {
+---
+> func fightTillDeath(superhero1: inout Superhero, superhero2: inout Superhero) {
+93c93
+< fightTillDeath(superhero1: spiderman, superhero2: drDoom)
+---
+> fightTillDeath(superhero1: &spiderman, superhero2: &drDoom)
